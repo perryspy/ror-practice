@@ -1,0 +1,31 @@
+<div id='call-log-table' class="container">
+  <div class="page-header">
+    <h1>CALL LOG</h1>
+  </div>
+  <% if !@calls.empty? %>
+    <table class='table'>
+      <tr>
+        <th>RECORDING START TIME (UTC)</th>
+        <th>DURATION (sec)</th>
+        <th>REAL NUMBER</th>
+        <th>COVER NUMBER</th>
+        <th>SUSPECT NUMBER</th>
+        <th>CALL TYPE</th>
+        <th>RECORDING</th>
+      </tr>
+      <% @calls.each do |call| %>
+        <tr>
+          <td><%= call.start_time %></td>
+          <td><%= call.duration %></td>
+          <td><%= call.real_number %></td>
+          <td><%= call.cover_number %></td>
+          <td><%= call.suspect_number %></td>
+          <td><%= call.call_type %></td>
+          <td><span class="glyphicon glyphicon-play-circle"></span></td>
+        </tr>
+      <% end -%>
+    </table>
+  <% else %>
+    <p align='center'>There are no calls for this account.</p>
+  <% end -%>
+</div>

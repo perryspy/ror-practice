@@ -1,0 +1,25 @@
+// Place all the styles related to the CallLog controller here.
+// They will automatically be included in application.css.scss.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.page-header {
+  color: darkblue;
+  border: none;
+  h1 {
+    font-size: 22px;
+  }
+}
+
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td {
+  border: none;
+}
+
+.table > tbody > tr > th {
+  color: gray;
+  font-size: 10px;
+}

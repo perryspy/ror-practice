@@ -1,0 +1,35 @@
+<div id='assigned-numbers-table' class="container">
+  <div class="page-header">
+    <h1>
+      ASSIGNED NUMBERS
+      <span class="glyphicon glyphicon-plus-sign pull-right"></span>
+    </h1>
+    <%= render :partial => "edit" %>
+  </div>
+  <% if !@assigned_numbers.empty? %>
+    <table class='table'>
+      <tr>
+        <th>COVER NUMBER</th>
+        <th>REAL NUMBER</th>
+        <th>STATUS</th>
+        <th>USER</th>
+        <th>COUNTRY</th>
+        <th>LINK</th>
+      </tr>
+      <% @assigned_numbers.each do |assigned_number| %>
+        <tr>
+          <td><%= assigned_number.cover_number %></td>
+          <td><%= assigned_number.real_number %></td>
+          <td><%= assigned_number.status %></td>
+          <td><%= assigned_number.username %></td>
+          <td><%= assigned_number.country %></td>
+          <td><span class="glyphicon glyphicon-link"></span></td>
+        </tr>
+      <% end -%>
+    </table>
+  <% else %>
+    <p align='center'>There are no mobilePBX Assigned Numbers for this account.</p>
+  <% end -%>
+</div>
+
+
