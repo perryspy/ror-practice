@@ -21,7 +21,7 @@
         </thead>
         <tbody>
           <% @assigned_numbers.each do |assigned_number| %>
-            <tr data-id="<%= assigned_number.id %>" class="<%= 'active' if assigned_number.id == Integer(params[:id]) %>">
+            <tr data-id="<%= assigned_number.id %>" class="<%= 'active' if params[:id] && assigned_number.id == Integer(params[:id]) %>">
               <td><%= assigned_number.cover_number %></td>
               <td><%= assigned_number.real_number %></td>
               <td><%= assigned_number.status %></td>
