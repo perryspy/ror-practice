@@ -2,11 +2,61 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+body {
+  background-color: #F5F8FA;
+}
+
+#assigned-numbers {
+  background-color: white;
+  height: 100vh;
+}
+
+#edit_number {
+  background-color: #F5F8FA;
+  padding: 2em;
+  height: 100vh;
+  #cover_number {
+    font-size: 22px;
+    color: #546475;
+  }
+  .an_label {
+    color: gray;
+    font-size: 10px;
+    font-weight: bold;
+  }
+  .field {
+    margin: 1em;
+    input {
+      padding: 0.5em;
+      border: 1px solid lightgray;
+      border-radius: 5px;
+    }
+  }
+  .actions {
+    position: fixed;
+    bottom: 0;
+    width: 20em;
+    margin: 0 -2em;
+    input {
+      height: 4em;
+      width: 100%;
+      color: white;
+      background-color: #E6924C;
+      border: none;
+    }
+    .cancel-btn {
+      margin: 1em;
+      color: #546475;
+    }
+  }
+
+}
+
 .page-header {
-  color: darkblue;
   border: none;
   h1 {
     font-size: 22px;
+    color: #546475;
   }
 }
 
@@ -19,7 +69,12 @@
   border: none;
 }
 
-.table > tbody > tr > th {
+.table > tbody > tr {
+  border-top: 2px solid lightgray;
+  cursor: pointer;
+}
+
+.table > thead > tr > th {
   color: gray;
   font-size: 10px;
 }

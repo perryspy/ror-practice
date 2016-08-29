@@ -1,1 +1,31 @@
-<h1>RENDERING EDIT PARTIAL</h1>
+<div id="edit_number" class="col-md-4">
+  <div class="row">
+    <a href="/assigned_numbers">
+      <span class="glyphicon glyphicon-remove pull-right"></span>
+    </a>
+  </div>
+  <div class="field">
+    <label class="an_label">COVER NUMBER</label><br>
+    <div id="cover_number"><%= @number.cover_number %></div>
+  </div>
+  <%= form_for @number, :url => { :controller => "assigned_numbers", :action => "update" } do |f| %>
+      <div class="field">
+        <label class="an_label">ATTACH REAL NUMBER</label><br>
+        <%= f.text_field :real_number %>
+      </div>
+      <div class="field">
+        <label class="an_label">USER</label><br>
+        <%= f.text_field :username %>
+      </div>
+      <div class="field">
+        <label class="an_label">COUNTRY CODE</label><br>
+        <%= f.text_field :country %>
+      </div>
+      <div class="actions">
+          <a href="/assigned_numbers">
+            <div class="text-center cancel-btn">CANCEL</div>
+          </a>
+        <%= f.submit "SAVE"%>
+      </div>
+  <% end -%>
+</div>

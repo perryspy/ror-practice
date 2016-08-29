@@ -2,6 +2,9 @@ RorPractice::Application.routes.draw do
 
   get 'calls' => 'calls#show'
   get 'assigned_numbers' => 'assigned_numbers#show'
+  get 'assigned_numbers/:id' => 'assigned_numbers#show'
+
+  match 'assigned_numbers/:id/update' , to: 'assigned_numbers#update', :via => :put
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
